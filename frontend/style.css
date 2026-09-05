@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 25px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* =========================
+   DASHBOARD METRICS
+========================= */
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* =========================
+   RECOVERED AMOUNT
+========================= */
+
+.recovered {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recovered h2 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#amountRecovered {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* =========================
+   AI RECOVERY AGENT
+========================= */
+
+.agent-section {
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-header h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Agent Flow */
+
+.agent-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  width: 170px;
+  padding: 20px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f8f9fa;
+  transition: transform 0.2s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-3px);
+}
+
+.flow-step span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 10px;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: #111;
+  color: #fff;
+
+  font-weight: bold;
+}
+
+.flow-step strong {
+  display: block;
+  font-size: 16px;
+}
+
+.flow-step small {
+  display: block;
+  margin-top: 6px;
+  color: #666;
+  font-size: 12px;
+}
+
+.flow-arrow {
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* =========================
+   RECOVERY ATTEMPTS
+========================= */
+
+.attempts {
+  margin-top: 30px;
+  padding: 25px;
+
+  background: #fff;
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  overflow-x: auto;
+}
+
+.attempts h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+thead {
+  background: #f5f6f8;
+}
+
+th,
+td {
+  padding: 13px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  font-size: 12px;
+  color: #555;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 14px;
+}
+
+/* Payment ID */
+
+td:first-child {
+  font-family: monospace;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Table Hover */
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   PRIORITY & STATUS BADGES
+========================= */
+
+.priority,
+.status {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Priority */
+
+.priority.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.priority.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Status */
+
+.status.successful {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attempts {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 850px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  .agent-flow {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .flow-step {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #amountRecovered {
+    font-size: 30px;
+  }
+}
+
+.ai-message-section {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.ai-message {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f8f9fa;
+  border-left: 4px solid #111;
+  border-radius: 8px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Recovery Statistics */
+
+.chart-section {
+  margin-top: 30px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+.retry-button {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.retry-button:hover {
+  opacity: 0.8;
+}

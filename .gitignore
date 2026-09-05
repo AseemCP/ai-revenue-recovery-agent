@@ -1,0 +1,43 @@
+venv/
+.env
+__pycache__/
+node_modules/
+*.pyc
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Database
+*.db
+*.sqlite3
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+*.env
+
+# Frontend
+node_modules/
+dist/
+
+# VS Code
+.vscode/
