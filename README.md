@@ -68,9 +68,7 @@ The AI Revenue Recovery Agent processes payment failures through an automated pi
                   Dashboard
 
 
-### BLOCK 4 — Key Features + Payment Detection
 
-``
 ## Key Features
 
 ### Payment Failure Detection
