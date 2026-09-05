@@ -34,12 +34,11 @@ The goal of this project is to automatically:
 6. Track recovery attempts and outcomes.
 
 ---
-
 ## Solution
 
 The AI Revenue Recovery Agent processes payment failures through an automated pipeline.
 
-`
+```text
                     Razorpay
                        |
                        v
@@ -54,19 +53,19 @@ The AI Revenue Recovery Agent processes payment failures through an automated pi
                        v
              Recovery Decision Engine
                        |
-             +---------+---------+
-             |                   |
-             v                   v
+              +--------+--------+
+              |                 |
+              v                 v
        Recovery Action      AI Message
-             |                   |
-             +---------+---------+
+              |                 |
+              +--------+--------+
                        |
                        v
                 Recovery Attempt
                        |
                        v
-                  Dashboard
-
+                   Dashboard
+```
 
 
 ## Key Features
@@ -230,6 +229,7 @@ The dashboard automatically refreshes recovery information periodically so that 
 
 ## Backend Architecture
 
+```text
 backend/
 │
 ├── main.py
@@ -241,6 +241,7 @@ backend/
 ├── payment_link.py
 ├── test_link.py
 └── createtables.py
+```
 
 ##Main Components
 main.py
@@ -356,7 +357,7 @@ A tunneling service can be used to expose the local FastAPI server.
 
 Example flow:
 
-
+```
 Razorpay
     |
     v
@@ -370,7 +371,7 @@ FastAPI
     |
     v
 Recovery Agent
-
+```
 The tunnel is required for Razorpay to reach the locally running backend.
 
 
@@ -378,7 +379,7 @@ The tunnel is required for Razorpay to reach the locally running backend.
 ## Example Recovery Flow
 
 Consider a simulated insufficient-funds payment.
-
+```
 Payment Failed
       |
       v
@@ -404,9 +405,9 @@ Recovery decision stored
       |
       v
 Dashboard updated
-
+```
 For a retryable payment failure:
-
+```
 Payment Failed
       |
       v
@@ -423,7 +424,7 @@ Generate AI Recovery Message
       |
       v
 Display Retry Payment button
-
+```
 
 ## Dashboard
 
